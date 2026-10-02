@@ -20,5 +20,5 @@ fun main(args: Array<String>)
         exitProcess(1);
     }
     val s=(a+b+c)/2
-    println("${sqrt(s*(s-a)*(s-b)*(s-c))}")
+    println("Area = %.5f".format(sqrt(s*(s-a)*(s-b)*(s-c))))
 }
