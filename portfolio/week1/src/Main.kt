@@ -8,7 +8,7 @@ fun main(args: Array<String>)
 {
     if(args.size!=3)
     {
-        println("3 arguments expected; ${args.size} found");
+        println("Error: values for a, b, c required on command line");
         exitProcess(1);
     }
     val a:Float?=args[0].toFloatOrNull()
