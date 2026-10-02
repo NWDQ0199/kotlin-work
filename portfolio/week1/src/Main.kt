@@ -4,15 +4,21 @@
 import kotlin.math.sqrt
 import kotlin.system.exitProcess
 
-fn main(args: Array<String>)
+fun main(args: Array<String>)
 {
     if(args.size!=3)
     {
+        println("3 arguments expected; ${args.size} found");
         exitProcess(1);
     }
-    val a=args[0]
-    val b=args[1]
-    val c=args[2]
+    val a:Float?=args[0].toFloatOrNull()
+    val b:Float?=args[1].toFloatOrNull()
+    val c:Float?=args[2].toFloatOrNull()
+    if(a==null||b==null||c==null)
+    {
+        println("all arguments must be numeric!");
+        exitProcess(1);
+    }
     val s=(a+b+c)/2
-    println({sqrt(s*(s-a)*(s-b)*(s-c))})
+    println("${sqrt(s*(s-a)*(s-b)*(s-c))}")
 }
