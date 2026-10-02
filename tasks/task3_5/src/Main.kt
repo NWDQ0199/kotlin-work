@@ -5,6 +5,11 @@ import kotlin.io.path.appendText
 import kotlin.io.path.readText
 import kotlin.io.path.writeText
 
-fun main() {
+fun main()
+{
     // Add your code here
+    val path=Path("balls.txt")
+    path.writeText("helo")
+    path.appendText("fishy")
+    println(path.readText())
 }
