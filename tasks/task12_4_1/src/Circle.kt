@@ -3,6 +3,6 @@ class Circle constructor(var point:Point, var radius:Double)
 {
     init
     {
-        require(radius>0)
+        require(radius>0,{"Radius must be positive!"})
     }
 }
