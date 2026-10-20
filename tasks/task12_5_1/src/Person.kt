@@ -2,6 +2,18 @@
 
 import kotlinx.datetime.LocalDate
 
-class Person(var name: String, val birth: LocalDate) {
+class Person(_name: String, val birth: LocalDate)
+{
     var isMarried = false
+
+    var name=_name
+    get()
+    {
+        return field.uppercase()
+    }
+    set(value)
+    {
+        require(value.isNotBlank(),{"name cannot be blank"})
+        field=value
+    }
 }
