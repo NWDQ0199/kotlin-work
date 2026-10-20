@@ -1,12 +1,12 @@
 // Task 12.8.2: class to represent playing cards
 class Card constructor(var rank:Rank, var suit:Suit)
 {
-    val fullName()
+    val fullName get()=
     {
-        return "${rank.name} of ${suit.name}"
+        "${rank.name} of ${suit.name}"
     }
 
-    override fun toString()
+    override fun toString():String
     {
         return "${rank}${suit}"
     }

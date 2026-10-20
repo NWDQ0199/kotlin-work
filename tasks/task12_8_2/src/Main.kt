@@ -1,7 +1,7 @@
 // Task 12.8.2: program to manipulate playing cards
 fun main()
 {
-    val cards:MutableList<Card>
+    val cards=mutableListOf<Card>()
     for(suit in Suit.entries)
     {
         for(rank in Rank.entries)
