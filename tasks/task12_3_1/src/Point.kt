@@ -4,7 +4,9 @@ import kotlin.math.hypot
 
 class Point(var x:Double, var y:Double)
 {
-    fun constructor(var x:Int, var y:Int): this(x.toDouble(),y.toDouble())
+    constructor(x:Int, y:Int): this(x.toDouble(),y.toDouble())
     fun distance()=hypot(x,y)
     fun distanceTo(p2:Point)=hypot(x-p2.x,y-p2.y)
+
+    override fun toString():String ="(${x} ${y})"
 }
