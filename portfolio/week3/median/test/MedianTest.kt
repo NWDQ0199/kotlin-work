@@ -27,10 +27,10 @@ class MedianTest : FreeSpec({
 	}
 
 	"median of 3-element list is element 1" {
-		median(listOf(2f,3f,4f)) shouldBe 3f
+		median(listOf(3f,2f,4f)) shouldBe 3f
 	}
 
 	"median of 4-element list is arithmetic mean of element 1 and 2" {
-		median(listOf(2f,3f,4f,5f)) shouldBe 3.5f
+		median(listOf(2f,3f,5f,4f)) shouldBe 3.5f
 	}
 })
