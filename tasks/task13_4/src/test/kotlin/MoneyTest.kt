@@ -43,4 +43,12 @@ class MoneyTest : FreeSpec({
     "€2.99 + €1.99 is €4.98" {
         Money(2, 99) + Money(1, 99) shouldBe Money(4, 98)
     }
+
+    "€5.46 prints €5.46" {
+        Money(5,46).toString() shouldBe "€5.46"
+    }
+
+    "€5.06 prints €5.06" {
+        Money(5,6).toString() shouldBe "€5.06"
+    }
 })

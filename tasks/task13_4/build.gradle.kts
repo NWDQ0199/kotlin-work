@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "2.4.10"
     `java-library`
+    application
 }
 
 repositories {
@@ -22,4 +23,12 @@ tasks.test {
     testLogging {
         events("passed", "failed", "skipped")
     }
+}
+
+application {
+    mainClass = "MainKt"
+}
+
+tasks.run {
+    standardInput = System.`in`
 }

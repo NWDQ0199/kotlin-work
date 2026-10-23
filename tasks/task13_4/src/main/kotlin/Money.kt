@@ -13,7 +13,10 @@ data class Money(var euros: Int, var cents: Int)
         //println("newCents: ${newCents}")
         return Money(euros+other.euros+newCents/100,newCents%100)
     }
-    //*/
 
-    //operator fun plus(other: Money) {val}
+    override fun toString(): String
+    {
+        //return "€$euros.$cents"
+        return "€%d.%02d".format(euros,cents)
+    }
 }
